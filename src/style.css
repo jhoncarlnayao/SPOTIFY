@@ -1,0 +1,198 @@
+body {
+    margin: auto;
+    width: 100%;
+    padding: 2rem;
+    overflow: hidden;
+    background-color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    justify-content: space-between;
+    position: relative;
+    bottom: 10px;
+}
+
+
+.bigtitle {
+    font-family: 'Inter', sans-serif;
+    color: #FFF;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.searchbar {
+    width: 400px;
+    height: 39px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background-color: #282828;
+    border: none;
+    transition: 0.3s;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.searchbar::placeholder {
+    color: rgba(255, 255, 255, 0.40);
+    font-family: "Inter";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    position: relative;
+    left: 15px;
+}
+
+.searchbar:focus {
+    outline: none;
+    border-color: rgb(74, 237, 69);
+    border: solid 1px rgb(74, 237, 69);
+}
+
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 26pc;
+}
+
+.searchbar-container img {
+    position: relative;
+    right: 40px;
+}
+
+.profile h1 {
+    color: #7C7676;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 5pc;
+}
+
+.browsemusic-container{
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+
+.library-container{
+    position: relative;
+    left: 20px;
+    top: 50px;
+}
+
+.browse-music h1 {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+li a {
+    list-style: none;
+    color: #7C7676;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    position: relative;
+    right: 38px;
+}
+
+.home,
+.tracks {
+    display: block;
+    margin-bottom: 22px !important;
+}
+
+.home img,
+.tracks img,
+.genres img {
+    margin-right: 10px;
+    position: relative;
+    top: 7px;
+}
+
+.library h1 {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 30px;
+}
+
+.recently-played,
+.favorite {
+    display: block;
+    margin-bottom: 22px !important;
+}
+
+.bigcard {
+    width: 1100px;
+    height: 450px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden; 
+    position: relative;
+    bottom: 25pc;
+    left: 18pc;
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .top-text {
+    color: #EAE8E8;
+    font-family: "Inter";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  .bigcard h1{
+    color: #EAE8E8;
+    font-family: "Inter";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  .minitext{
+    color: #EAE8E8;
+    font-family: "Inter";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
