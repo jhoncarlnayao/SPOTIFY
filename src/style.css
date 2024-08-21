@@ -9,7 +9,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    margin: 20px;
+    margin: 10px;
     justify-content: space-between;
     position: relative;
     bottom: 10px;
@@ -84,13 +84,13 @@ header {
     right: 5pc;
 }
 
-.browsemusic-container{
+.browsemusic-container {
     position: relative;
     left: 20px;
     top: 10px;
 }
 
-.library-container{
+.library-container {
     position: relative;
     left: 20px;
     top: 50px;
@@ -154,13 +154,13 @@ li a {
     flex-shrink: 0;
     border-radius: 50px;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
     bottom: 25pc;
     left: 18pc;
-  }
-  
-  .background-video {
+}
+
+.background-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -168,31 +168,149 @@ li a {
     height: 100%;
     object-fit: cover;
     z-index: -1;
-  }
+}
 
-  .top-text {
+.top-text {
     color: #EAE8E8;
     font-family: "Inter";
     font-size: 13px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
-  }
+}
 
-  .bigcard h1{
+.bigcard h1 {
     color: #EAE8E8;
     font-family: "Inter";
-    font-size: 40px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 900;
     line-height: normal;
-  }
+    position: relative;
+    top: 20px;
+}
 
-  .minitext{
+.minitext {
     color: #EAE8E8;
     font-family: "Inter";
     font-size: 17px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-  }
+    position: relative;
+    bottom: 20px;
+}
+
+.bigcard-text {
+    top: 20px;
+    position: relative;
+    left: 80px;
+}
+
+.numberstext {
+    color: #EAE8E8;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    left: 5px;
+    top: 70px;
+}
+
+.numberstext img {
+    position: relative;
+    top: 5px;
+    left: -5px;
+}
+
+.bottom-musiclist {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    bottom: 23pc;
+    left: 19pc;
+}
+
+.bottom-musiclist h1 {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    transition: 0.5s;
+}
+
+.bottom-musiclist p {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    position: relative;
+    bottom: 10px;
+    transition: 0.5s;
+}
+
+.bottom-musiclist img {
+    height: 120px;
+}
+
+.bottom-musiclist h1,
+.bottom-musiclist p {
+    position: relative;
+    left: 5px;
+}
+
+
+.musicbox1 img,
+.musicbox2 img,
+.musicbox3 img,
+.musicbox4 img,
+.musicbox5 img,
+.musicbox6 img {
+    transition: 0.5s ease-in-out;
+    margin-right: 60px;
+    cursor: pointer;
+}
+
+
+.musicbox1 img:hover,
+.musicbox2 img:hover,
+.musicbox3 img:hover,
+.musicbox4 img:hover,
+.musicbox5 img:hover,
+.musicbox6 img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.musicbox1 img:hover~h1,
+.musicbox1 img:hover~p,
+.musicbox2 img:hover~h1,
+.musicbox2 img:hover~p,
+.musicbox3 img:hover~h1,
+.musicbox3 img:hover~p,
+.musicbox4 img:hover~h1,
+.musicbox4 img:hover~p,
+.musicbox5 img:hover~h1,
+.musicbox5 img:hover~p,
+.musicbox6 img:hover~h1,
+.musicbox6 img:hover~p {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.longcard{
+    width: 1920px;
+    height: 109px;
+    flex-shrink: 0;
+    background: rgba(35, 35, 35, 0.70);
+    backdrop-filter: blur(2px);
+    position: relative;
+    bottom: 23.8pc;
+    right: 30px;
+}
