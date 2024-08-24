@@ -168,6 +168,12 @@ li a {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+    opacity: 1;
+}
+
+.fade-out{
+    opacity: 0;
 }
 
 .top-text {
@@ -323,7 +329,7 @@ li a {
     width: 90px;
     height: 90px;
     border-radius: 20px;
-    background-image: url(assets/image.png);
+    background-image: url(assets/ladygaga.jpg);
     background-size: cover;
 }
 
