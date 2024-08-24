@@ -5,8 +5,7 @@
     background-position: center; 
   } */
 
-  body {
-    background-color: #171616;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,34 +16,32 @@
     padding: 0;
 }
 
-.container {
+.video-container {
+    position: relative;
     width: 100%;
     height: 100vh;
-    --s: 700px; /* Increased size for cover effect */
-    --c1: #1d1d1d;
-    --c2: #4e4f51;
-    --c3: #3c3c3c;
-  
-    background: repeating-conic-gradient(
-          from 30deg,
-          #0000 0 120deg,
-          var(--c3) 0 180deg
-        )
-        calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-      repeating-conic-gradient(
-        from 30deg,
-        var(--c1) 0 60deg,
-        var(--c2) 0 120deg,
-        var(--c3) 0 180deg
-      );
-    background-size: var(--s) calc(var(--s) * 0.577);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
-  
 
-.bigcard{
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%);
+}
+
+
+
+.bigcard {
+    /* display: none; */
     width: 600px;
     height: 781px;
     flex-shrink: 0;
@@ -52,21 +49,21 @@
     background: #171616;
 }
 
-.text-with-logo img{
+.text-with-logo img {
     width: 70px;
     height: 70px;
 }
 
-.text-with-logo h1{
+.text-with-logo h1 {
     color: #FFF;
     font-family: "Inter";
     font-size: 35px;
     font-style: normal;
     font-weight: 800;
-    line-height: normal;   
+    line-height: normal;
 }
 
-.text-with-logo{
+.text-with-logo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,10 +95,15 @@
     position: relative;
     left: 18.6pc;
     top: 20px;
+    cursor: pointer
 }
 
 
-#username, #password{
+#username,
+#password,
+#username-register,
+#password-register,
+#email-register {
     width: 380px;
     height: 20px;
     flex-shrink: 0;
@@ -113,7 +115,11 @@
     transition: 0.5s ease-in-out;
 }
 
-#username::placeholder, #password::placeholder{
+#username::placeholder,
+#password::placeholder,
+#email-register::placeholder,
+#password-register::placeholder,
+#username-register::placeholder {
     color: #948E8E;
     font-family: Inter;
     font-size: 16px;
@@ -124,21 +130,25 @@
     left: 10px;
 }
 
-#username:focus, #password:focus{
+#username:focus,
+#password:focus,
+#email-register:focus,
+#password-register:focus,
+#username-register:focus {
     outline: none;
     transform: scale(1.1);
     border: 3px solid #47B25E;
 }
 
-#username{
+#username {
     margin-bottom: 30px;
 }
 
-#password{
+#password {
     margin-bottom: 60px;
 }
 
-#submit{
+#submit {
     width: 380px;
     height: 54px;
     flex-shrink: 0;
@@ -157,7 +167,7 @@
 }
 
 
-#submit:hover{
+#submit:hover {
     transform: scale(1.1);
     box-shadow: 0px 0px 30px 5px #47b25ec8;
 }
@@ -171,7 +181,7 @@
     top: 40px;
 }
 
-.forgot-password{
+.forgot-password {
     color: #8D8D8D;
     font-family: "Inter";
     font-size: 13px;
@@ -180,7 +190,7 @@
     line-height: normal;
 }
 
-.forgot-password-container{
+.forgot-password-container {
     display: flex;
     justify-content: center;
     position: relative;
@@ -188,4 +198,131 @@
 }
 
 
+/* .bigcard-container-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+} */
 
+.bigcard-register {
+    display: none;
+    width: 600px;
+    height: 781px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #171616;
+}
+
+.text-with-logo-register img {
+    width: 70px;
+    height: 70px;
+}
+
+.text-with-logo-register h1 {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.text-with-logo-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    top: 60px;
+}
+
+#signin-register {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -2.5px;
+    position: relative;
+    top: 90px;
+    left: 100px;
+}
+
+.signup-register {
+    color: #8D8D8D;
+    font-family: "Inter";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+    left: 19.5pc;
+    top: 20px;
+    cursor: pointer;
+}
+
+#username-register {
+    margin-bottom: 20px;
+}
+
+#email-register {
+    margin-bottom: 20px;
+}
+
+#password-register {
+    margin-bottom: 60px;
+}
+
+#submit-register {
+    width: 380px;
+    height: 54px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #47B25E;
+    box-shadow: 7px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFFCFC;
+    font-family: "Inter";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    border: none;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+#submit-register:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 5px #47b25ec8;
+}
+
+.inputs-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+}
+
+.forgot-password-register {
+    color: #8D8D8D;
+    font-family: "Inter";
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.forgot-password-container-register {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 55px;
+}
+
+/* $ANIMATION */
