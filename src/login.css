@@ -325,4 +325,108 @@ body {
     top: 55px;
 }
 
-/* $ANIMATION */
+.modal-container {
+  display: none;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-container-blank-userandpass{
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.modal-container-wrongpassword{
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-container-wrongusername{
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-container-usernotfound{
+    display: none;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.modal{
+    background-color: #171616;
+    width: 500px;
+    height: 330px;
+    border-radius: 30px;
+    box-shadow: #0000008b 0px 0px 10px 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+
+.modal img{
+    position: relative;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+}
+
+.modal button{
+    width: 300px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #b14539;
+    box-shadow: 7px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFFCFC;
+    font-family: "Inter";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    border: none;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 15px;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 30px 5px #b14539;
+}
+
+.modal h1{
+    font-family: "Inter";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.modal p{
+    font-family: "Inter";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: normal;
+    position: relative;
+    bottom: 10px;
+}
