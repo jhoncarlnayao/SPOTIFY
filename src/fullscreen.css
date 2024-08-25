@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(30%);
+}
+
+.footer-container {
+    position: relative;
+    z-index: 999;
+}
+
+.longcard {
+    width: 100%;
+    height: 120px;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(2px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.music-card {
+    z-index: 9999;
+    position: absolute;
+    top:85%;
+    left:10%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 280px;
+    border-radius: 20px;
+    background-image: url(assets/ladygaga.jpg);
+    background-size: cover;
+}
+
+.minitext-footer h1 {
+    color: #FFF;
+    font-family: "Inter";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.minitext-footer p {
+    color: #ffffffa4;
+    font-family: "Inter";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    position: relative;
+    bottom: 10px;
+}
+
+.minitext-footer {
+    display: block;
+    justify-content: center;
+    position: absolute;
+    left: 22%;
+    top: 80%;
+    transform: translateY(-50%);
+}
+
+.long-stick {
+    width: 900px;
+    height: 3px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: linear-gradient(270deg, #665F5F 42%, #D9D9D9 100%);
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons-musics {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pause-button {
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.left,
+.right {
+    width: 40px;
+    height: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.repeat,
+.shuffle {
+    width: 17px;
+    height: 17px;
+    margin-top: 10px;
+}
+
+.rightbuttons img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.rightbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.list-music {
+    margin-right: 25px;
+}
+
+.volume-icon {
+    margin-right: 25px;
+}
+
+#volume {
+    height: 5px;
+    background-color: white;
+    margin-right: 25px;
+}
+
+.uppertexts img{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 6%;
+    left: 2%;
+}
+
+.upper-texts p {
+    color: #B9A9A9;
+    font-family: "Inter";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    }
+
+.upper-texts h1{
+    color: #B9A9A9;
+    font-family: "Inter";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    position: relative;
+    bottom: 7px;
+}
+
+.upper-texts{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}

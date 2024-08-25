@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fullscreen.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="video">
+        <video autoplay muted loop playsinline id="background-video">
+            <source src="assets/bgmp4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="uppertexts-container">
+            <div class="uppertexts">
+                <img src="assets/Music Album.png" alt="">
+                <div class="upper-texts">
+                   <p>PLAYING FROM PLAYLIST</p>
+                   <h1>WhimsiCloud</h1>
+                </div>
+            </div>
+        </div>
+
+<footer>
+    <div class="music-card"></div>
+    <div class="minitext-footer">
+        <h1 class="minititle_footer">Die With A Smile</h1>
+        <p class="minitext_footer">By Lady Gaga and Bruno Mars</p>
+    </div>
+    <div class="footer-container" style="z-index: 999;">
+        <div class="longcard">
+           
+            <div class="long-stick"></div>
+            <div class="buttons-musics">
+                <img src="assets/Shuffle (1).png" alt="" class="shuffle">
+                <img src="assets/left.png" alt="" class="left">
+                <img src="assets/pause-circle.png" alt="" class="pause-button" id="playbutton-music" style="cursor:pointer;">
+                <img src="assets/right.png" alt="" class="right">
+                <img src="assets/arrows-repeat.png" alt="" class="repeat">
+            </div>
+
+            <div class="rightbuttons-container">
+                <div class="rightbuttons">
+                    <img src="assets/list-music.png" alt="" class="list-music">
+                    <img src="assets/volume.png" alt="" class="volume-icon">
+                    <input type="range" class="slider-volume" id="volume" value="100">
+                    <img src="assets/expand.png" alt="" class="fullscreen">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</body>
+</html>

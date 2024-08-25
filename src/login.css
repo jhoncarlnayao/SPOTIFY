@@ -333,6 +333,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
+
 .modal-container-blank-userandpass{
     display: none;
     position: absolute;
@@ -340,6 +341,17 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.centerdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .modal-container-wrongpassword{
     display: none;
     position: absolute;
@@ -429,4 +441,35 @@ body {
     line-height: normal;
     position: relative;
     bottom: 10px;
+}
+/* $ANIMATION  */
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.slide-out {
+    animation: slideOut 0.5s ease forwards;
 }

@@ -18,7 +18,7 @@
             Your browser does not support the video tag.
         </video>
 
-<!-- $ THIS IS LOGIN CARD -->
+        <!-- $ THIS IS LOGIN CARD -->
         <div class="bigcard-container">
             <div class="bigcard">
                 <div class="text-with-logo">
@@ -37,9 +37,9 @@
                 </div>
             </div>
         </div>
-<!-- $ END OF LOGIN CARD -->
+        <!-- $ END OF LOGIN CARD -->
 
-<!-- $ THIS IS REGISTER CARD -->
+        <!-- $ THIS IS REGISTER CARD -->
         <div class="bigcard-container-register">
             <div class="bigcard-register">
                 <div class="text-with-logo-register">
@@ -59,57 +59,63 @@
                 </div>
             </div>
         </div>
-<!-- $ END OF REGISTER CARD -->
+        <!-- $ END OF REGISTER CARD -->
 
-<!-- $ THIS IS MODAL NOTIFICATION WHEN USER ACCOUNT IS NOT FOUND/WRONG PASSWORD AND USERNAME -->
+        <!-- $ THIS IS MODAL NOTIFICATION WHEN USER ACCOUNT IS NOT FOUND/WRONG PASSWORD AND USERNAME -->
 
         <div class="modal-container">
             <div class="modal">
                 <img src="assets/bell-notification-social-media.png" alt="">
                 <h1>Wrong username or password</h1>
-                <p>&nbsp;&nbsp;&nbsp;  Please check your username and password. <br>The account you are trying to log in is incorrect.</p>
+                <p>&nbsp;&nbsp;&nbsp; Please check your username and password. <br>The account you are trying to log in
+                    is incorrect.</p>
                 <button id="try-again"><Strong>Try again</Strong></button>
             </div>
         </div>
     </div>
 
+
     <div class="modal-container-blank-userandpass">
         <div class="modal">
             <img src="assets/bell-notification-social-media.png" alt="">
             <h1>Fill in your username and password</h1>
-            <p>&nbsp;&nbsp;&nbsp;  Please fill in your username and password. <br>The information you are trying to log in is incomplete.</p>
+            <p>&nbsp;&nbsp;&nbsp; Please fill in your username and password. <br>The information you are trying to log
+                in is incomplete.</p>
             <button id="try-again-blank"><Strong>Try again</Strong></button>
         </div>
     </div>
-</div>
-
-<div class="modal-container-usernotfound">
-    <div class="modal">
-        <img src="assets/bell-notification-social-media.png" alt="">
-        <h1>User not found</h1>
-        <p>&nbsp;&nbsp;&nbsp;  We can't find an account with that username. <br>Please try again or sign up if you don't have an account.</p>
-        <button id="try-again-usernotfound"><Strong>Try again</Strong></button>
     </div>
-</div>
 
-<div class="modal-container-wrongpassword">
-    <div class="modal">
-        <img src="assets/bell-notification-social-media.png" alt="">
-        <h1>Incorrect password</h1>
-        <p>&nbsp;&nbsp;&nbsp;  The password you entered is incorrect. <br>Please try again.</p>
-        <button id="try-again-wrongpassword"><Strong>Try again</Strong></button>
+    <div class="modal-container-usernotfound">
+        <div class="modal">
+            <img src="assets/bell-notification-social-media.png" alt="">
+            <h1>User not found</h1>
+            <p>&nbsp;&nbsp;&nbsp; We can't find an account with that username. <br>Please try again or sign up if you
+                don't have an account.</p>
+            <button id="try-again-usernotfound"><Strong>Try again</Strong></button>
+        </div>
     </div>
-</div>
 
-<div class="modal-container-wrongusername">
-    <div class="modal">
-        <img src="assets/bell-notification-social-media.png" alt="">
-        <h1>Incorrect username</h1>
-        <p>&nbsp;&nbsp;&nbsp;  The username you entered is incorrect. <br>Please try again.</p>
-        <button id="try-again-wrongusername"><Strong>Try again</Strong></button>
+    <div class="modal-container-wrongpassword">
+        <div class="modal">
+            <img src="assets/bell-notification-social-media.png" alt="">
+            <h1>Incorrect password</h1>
+            <p>&nbsp;&nbsp;&nbsp; The password you entered is incorrect. <br>Please try again.</p>
+            <button id="try-again-wrongpassword"><Strong>Try again</Strong></button>
+        </div>
     </div>
-</div>
-</div>
+
+    <div class="modal-container-wrongusername">
+        <div class="modal">
+            <img src="assets/bell-notification-social-media.png" alt="">
+            <h1>Incorrect username</h1>
+            <p>&nbsp;&nbsp;&nbsp; The username you entered is incorrect. <br>Please try again.</p>
+            <button id="try-again-wrongusername"><Strong>Try again</Strong></button>
+        </div>
+    </div>
+
+    <div class="centerdiv"></div>
+    </div>
 
     <script>
         var username = document.getElementById("username");
@@ -121,26 +127,31 @@
         var tryAgain3 = document.getElementById("try-again-usernotfound");
         var tryAgain4 = document.getElementById("try-again-wrongusername");
         var tryAgain5 = document.getElementById("try-again-wrongpassword");
-        
+        var wrongusername = document.querySelector('.modal-container-wrongusername');
+        var blankinputs = document.querySelector('.modal-container-blank-userandpass');
 
 
 
 
         submit.onclick = function () {
-            if (username.value == "admin" && password.value == "admin" ) {
+            if (username.value == "admin" && password.value == "admin") {
                 window.location.href = "style.html";
 
-            }else if(username.value =="" && password.value == ""){
+            } else if (username.value == "" && password.value == "") {
+                blankinputs.classList.add('slide-in')
                 document.querySelector('.modal-container-blank-userandpass').style.display = "block";
 
-            } else if(username.value !== "admin" && password.value !== "admin") {
+            } else if (username.value !== "admin" && password.value !== "admin") {
                 document.querySelector('.modal-container-usernotfound').style.display = "block";
 
-            } else if(username.value == "admin" && password.value !== "admin") {
+            } else if (username.value == "admin" && password.value !== "admin") {
                 document.querySelector('.modal-container-wrongpassword').style.display = "block";
-                
-            } else if(username.value !== "admin" && password.value == "admin") {
-                document.querySelector('.modal-container-wrongusername').style.display = "block";
+
+            } else if (username.value !== "admin" && password.value == "admin") {
+                wrongusername.classList.add('slide-in')
+                setTimeout(() => {
+                    document.querySelector('.modal-container-wrongusername').style.display = "block";
+                }, 500);
             }
         }
 
@@ -153,23 +164,26 @@
             document.querySelector('.modal-container-blank-userandpass').style.display = "none";
         }
 
-      
+
         var tryAgain3 = document.getElementById("try-again-usernotfound");
         tryAgain3.onclick = function () {
             document.querySelector('.modal-container-usernotfound').style.display = "none";
         }
 
-      
+
         var tryAgain4 = document.getElementById("try-again-wrongpassword");
         tryAgain4.onclick = function () {
             document.querySelector('.modal-container-wrongpassword').style.display = "none";
         }
 
-     
+
         var tryAgain5 = document.getElementById("try-again-wrongusername");
         tryAgain5.onclick = function () {
             document.querySelector('.modal-container-wrongusername').style.display = "none";
         }
+
+
+        
         var registeraccount = document.querySelector(".signup")
         var loginaccount = document.querySelector(".signup-register")
         registeraccount.onclick = function () {
